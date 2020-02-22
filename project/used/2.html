@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <title>小遊戲 換裝</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script src="/jquery/jquery-1.11.1.min.js"></script>
+</head>
+
+<body>
+    <div class="bb">
+        <a href="./index.html"><img src="images/herf.png"></a>
+        <br>
+        <a href="./about.html"><img src="images/her3.png"></a>
+        <br>
+        <a href="./2.html"><img src="images/her1.png"></a>
+        <br>
+        <a href="./know.html"><img src="images/her2.png"></a>
+    </div>
+    <div style="position: relative;top: 0%;left: 40%">
+        <a href="2.html" class="button">重新裝扮</a>
+    </div>
+    <div style="position: relative;top: 0%;left: 60%">
+        <a href="3.html" id="a" style="display: none">
+            <img src="images/button.png" border="0" title="下一關"></a>
+    </div>
+    </div>
+    </div>
+    <div style="position: relative;top:10%;left: 10%;padding:10px">
+        <style type="text/css">
+            #Box1 {
+                width: 253px;
+                height: 253px;
+                border: 1px #ccc dashed;
+                float: left;
+            }
+        </style>
+        <script type="text/javascript">
+            function AllowDrop(event) {
+                event.preventDefault();
+            }
+
+            function Drag(event) {
+                event.dataTransfer.setData("text", event.currentTarget.id);
+
+            }
+
+            function Drop(event) {
+                event.preventDefault();
+                var data = event.dataTransfer.getData("text");
+                event.currentTarget.appendChild(document.getElementById(data));
+                if (data == "Img1") {
+                    alert("答對了! 要穿上這套工作服才能保護自己和小鯨魚喔");
+                    document.getElementById("a").style.display = "";
+                } else {
+                    alert("要穿上工作服喔 請你再試一次");
+                }
+            }
+        </script>
+        <div id="Box1" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>
+
+        <img id="Img2" src="images/cloth1.png" draggable="true" ondragstart="Drag(event)" style="left: 5px">
+
+        <img id="Img3" src="images/cloth2.png" draggable="true" ondragstart="Drag(event)" style="left: 5px">
+
+        <img id="Img1" src="images/cloth.png" draggable="true" ondragstart="Drag(event)" style="left: 5px">
+
+        <div style="clear:both;"></div>
+    </div>
+    <br>
+    <img src="images/message.png" style="left: 40%;padding:50px;position:absolute;">
+</body>
+</html>

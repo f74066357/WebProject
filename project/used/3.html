@@ -1,0 +1,68 @@
+<html>
+<head>
+    <title>小遊戲 餵食</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script language="JavaScript">
+        // <!-- JavaScript
+        function clickCount() {
+            var count = document.getElementById("count").value;
+            count++;
+            document.getElementById("p").src = "images/bg3.png";
+            document.getElementById("count").value = count;
+            document.getElementById("barv").value = count;
+            if (count % 2 == 0) {
+                document.getElementById("p").src = "images/bg2.png";
+                document.getElementById("p2").src = "images/none.png ";
+            } else {
+                document.getElementById("p2").src = "images/food.png ";
+            }
+            if (count >= 45) {
+                document.getElementById("f").style.display = "none";
+                document.getElementById("a").style.display = "";
+                document.getElementById("c").innerHTML = "小鯨魚吃飽了";
+                alert("謝謝你 小鯨魚吃飽了");
+            }
+        }
+        // document.getElementById("bar").innerHTML="<progress value="count" max="100"></progress>"; - JavaScript - -->
+    </script>
+    </head>
+<body style="background-color:white;">
+    <div class="bb">
+
+        <a href="./index.html"><img src="images/herf.png"></a>
+        <br>
+        <a href="./about.html"><img src="images/her3.png"></a>
+        <br>
+        <a href="./2.html"><img src="images/her1.png"></a>
+        <br>
+        <a href="./know.html"><img src="images/her2.png"></a>
+
+    </div>
+    <div style="position: absolute;top: 0%;left: 15%">
+        <img src="images/bg1.png">
+    </div>
+    <div style="position: absolute;top:-10%;left:12%">
+        <img id="p" name="p" src="images/bg2.png">
+    </div>
+    <div style="position: absolute;top: 7%;left: 50%"><img src="images/hand.png"></div>
+    <div style="position: absolute;top: 35%;left: 35%"><img id="p2" name="p2" src="images/none.png"></div>
+    <div style="position: absolute;top: 20%;left: 75%">
+        <p>餵食次數 </p>
+        <input id="count" name="count" value="0" hidden>
+        </p>
+        <p>
+            <input type="button" id="f" name="formbutton1" value="點擊餵食" onclick="clickCount();">
+        </p>
+        <progress id="barv" name="barv" value="0" max="45"></progress>
+    </div>
+    <div style="position: absolute;top: 45%;left: 75%">
+        <p id="c"></p>
+        <a href="./a/4.html" id="a" style="display: none">
+            <img src="images/button.png" border="0" title="下一步"></a>
+    </div>
+    <div style="position: absolute;top: 50%;left: 75%">
+    </div>
+</body>
+</html>

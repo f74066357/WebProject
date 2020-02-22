@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>save whale</title>
+    <link rel="stylesheet" href="css/example.css" />
+
+</head>
+<body>
+    <div class="bbb">
+        <img src="images/cover2.png" alt="" />
+    </div>
+    <div class="bb">
+        <img src="images/nooo.png" />
+        <br>
+        <a href="./index.html"><img src="images/herf.png"></a>
+        <br>
+        <a href="./about.html"><img src="images/her3.png"></a>
+        <br>
+        <a href="./2.html"><img src="images/her1.png"></a>
+        <br>
+        <a href="./know.html"><img src="images/her2.png"></a>
+
+    </div>
+
+    <div class="b12 scroll">
+        <img src="images/12light.png" alt="" />
+    </div>
+    <div class="b11 scroll">
+        <img src="images/11bird.png" alt="" />
+    </div>
+    <div class="b10 scroll">
+        <img src="images/10sun.png" alt="" />
+    </div>
+    <div class="b9 scroll">
+        <img src="images/9sea.png" alt="" />
+    </div>
+    <div class="b7 scroll">
+        <img src="images/7bor.png" alt="" />
+    </div>
+    <div class="b6 scroll">
+        <img src="images/6sea.png" alt="" />
+    </div>
+    <div class="b5 scroll">
+        <img src="images/5sea.png" alt="" />
+    </div>
+    <div class="b4 scroll">
+        <img src="images/4rock.png" alt="" />
+    </div>
+    <div class="b3 scroll">
+        <img src="images/3fish.png" alt="" />
+    </div>
+    <div class="b2 scroll">
+        <img src="images/2turtle.png" alt="" />
+    </div>
+    <div class="b1 scroll">
+        <img src="images/1whale.png" alt="" />
+    </div>
+    <script type="text/javascript" src="../libs/jquery.min.js"></script>
+    <script type="text/javascript" src="../src/jquery.jInvertScroll.js"></script>
+    <script type="text/javascript">
+        (function($) {
+            var elem = $.jInvertScroll(['.scroll'], // an array containing the selector(s) for the elements you want to animate
+                {
+                    height: 6000, // optional: define the height the user can scroll, otherwise the overall length will be taken as scrollable height
+                    onScroll: function(percent) { //optional: callback function that will be called when the user scrolls down, useful for animating other things on the page
+                        console.log(percent);
+                    }
+                });
+
+            $(window).resize(function() {
+                if ($(window).width() <= 768) {
+                    elem.destroy();
+                } else {
+                    elem.reinitialize();
+                }
+            });
+        }(jQuery));
+    </script>
+</body>
+</html>

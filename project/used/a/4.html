@@ -1,0 +1,83 @@
+<html>
+<head>
+    <title>小遊戲 紀錄</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="whale.css">
+</head>
+<script type="text/javascript">
+    window.onload = Init;
+    var count = 1;
+    function Init() {
+        sleep(7000);
+
+        window.setInterval("ShowPicturesInOrder()", 2000);
+        count = 1;
+    }
+    var teacherNum = 1;
+    var check = 0;
+
+    function ShowPicturesInOrder() {
+        if (count == 10) {
+            return;
+        }
+        var pic = Math.floor(Math.random() * 3 + 1);;
+        var imgObj = document.getElementById("img1")
+
+        imgObj.src = "whale" + pic + ".png";
+        if (pic == 2) {
+            check++;
+        }
+        count++;
+    }
+    var id = 1;
+    var click = 0;
+    function next() {
+        click++;
+        id = id + 1;
+        if (id < 6) {
+            document.getElementById("img2").src = 'board' + id + '.png';
+        } else {
+            document.getElementById("img2").src = 'nooo.png';
+        }
+        if (click == check) {
+            alert("成功紀錄!");
+        } else {
+            alert("錯誤!");
+        }
+        console.log(id);
+    }
+    function sleep(milliseconds) {
+        var start = new Date().getTime();
+        for (var i = 0; i < 1e7; i++) {
+            if ((new Date().getTime() - start) > milliseconds) {
+                break;
+            }
+        }
+    }
+</script>
+
+<body width="3000px">
+    <div class="bb">
+        <br>
+        <a href="../index.html"><img src="./herf.png"></a>
+        <br>
+        <a href="../about.html"><img src="./her3.png"></a>
+        <br>
+        <a href="../2.html"><img src="./her1.png"></a>
+        <br>
+        <a href="../know.html"><img src="./her2.png"></a>
+    </div>
+    <input type="button" id="input1" style="width:100px;height:61px;font-size:20px;background-image:url(button.png);float:right;background-repeat: no-repeat;" onclick="next()">
+    <div width="3000px" margin="0px">
+        <div id="div1" style="margin-bottom: 0px;">
+            <div id="div2" style="margin-bottom: 0px;">
+                <img id="img1" src="whale3.png"></img>
+            </div>
+        </div>
+        <div id="div3" style="position:fixed;right:100px;margin-top:0px;">
+            <img id="img5" src="hand.png" width="200px" height="250px" style="right:0px;float:right;margin: 0px;"></img>
+            <img id="img2" src="board1.png" width="300px" height="350px" style="right:0px;margin: 0px;float:right;"></img>
+        </div>
+    </div>
+</body>
+</html>

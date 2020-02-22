@@ -1,0 +1,208 @@
+html,
+body
+{
+  padding: 0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* hide horizontal scrollbars, since we use the vertical ones to scroll to the right */
+body
+{
+  overflow-x: hidden;
+  background: url('../images/bg.jpg') repeat top left;
+}
+
+h1
+{
+  font-size: 20px;
+  font-weight: normal;
+  color: #2e6e80;
+}
+
+/**
+  * important: keep position fixed, you can however use top:0 instead of bottom:0
+  * if you want to make it stick to the top of the browser
+  */
+.scroll
+{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+/**
+  * z-index ordering of the different layers, do this for your layers,
+  * also assign absolute width (to prevent issues if the script gets executed before the images get loaded)
+  */
+.a13
+{
+  z-index: 4600;
+  width: 9800px;
+}
+
+.a12
+{
+  z-index: 4300;
+  width: 9500px;
+}
+
+.a11
+{
+  z-index: 4000;
+  width: 9200px;
+}
+
+.a10
+{
+  z-index: 3500;
+  width: 9000px;
+}
+.a9
+{
+  z-index: 3000;
+  width: 8500px;
+}
+
+
+.a7
+{
+  z-index: 2800;
+  width: 8000px;
+}
+.a6
+{
+  z-index: 2500;
+  width: 7600px;
+}
+
+.a5
+{
+  z-index: 2300;
+  width: 7100px;
+}
+
+.a4
+{
+  z-index: 2000;
+  width: 6800px;
+}
+.a3
+{
+  z-index: 1600;
+  width: 6300px;
+}
+
+.a2
+{
+  z-index: 1000;
+  width: 5800px;
+}
+
+.a1
+{
+  z-index: 100;
+  width: 5500px;
+}
+.b
+{
+  z-index: 5000;
+  width: 10000px;
+}
+.bbb
+{
+  z-index: 5000;
+  width: 3200px;
+  position:fixed; 
+}
+.button1
+{
+	position:absolute;
+	top:467px;
+	left:520px;
+}
+.button2
+{
+	position:absolute;
+	top:280px;
+	left:600px;
+}
+.bb
+{
+	position:fixed;
+	z-index:5001;
+	left:100;
+}
+.b12
+{
+  z-index: 1;
+  width: 2000px;
+}
+
+.b11
+{
+  z-index: 100;
+  width: 2100px;
+}
+
+.b10
+{
+  z-index: 200;
+  width: 2200px;
+}
+.b9
+{
+  z-index: 300;
+  width: 2300px;
+}
+
+
+.b7
+{
+  z-index: 400;
+  width: 2400px;
+}
+.b6
+{
+  z-index: 500;
+  width: 2500px;
+}
+
+.b5
+{
+  z-index: 600;
+  width: 2600px;
+}
+
+.b4
+{
+  z-index: 700;
+  width: 2700px;
+}
+.b3
+{
+  z-index: 800;
+  width: 2800px;
+}
+
+.b2
+{
+  z-index: 900;
+  width: 2900px;
+}
+
+.b1
+{
+  z-index: 1000;
+  width: 3000px;
+}
+a{
+  padding:5px;
+  font-size: 0;
+
+}
+a:hover{
+  opacity:0.5;
+}
+
+

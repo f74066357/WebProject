@@ -1,0 +1,32 @@
+
+#div1
+{
+ background-image: url(background.png);
+ width:900px;
+ height:600px;
+ margin-top: 0px;
+ float: left;
+}
+#div2
+{
+  position: relative;
+  animation:myfirst 5s;
+  -webkit-animation:myfirst 5s;
+  animation-iteration-count: 1;
+  top:200px;
+  left:400px;
+}
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+0%   { left:400px; top:200px;}
+25%  { left:400px; top:250px;}
+50%  { left:400px; top:300px;}
+75%  { left:400px; top:250px;}
+100% { left:400px; top:200px;}
+}
+.bb
+{
+	position:fixed;
+	z-index:5001;
+	left:100;
+}

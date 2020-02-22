@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>save whale</title>
+    <link rel="stylesheet" href="css/example.css" />
+</head>
+<body>
+    <div class="b scroll">
+        <img src="images/hover.png" alt="" />
+    </div>
+    <div class="bb">
+        <img src="images/nooo.png" />
+        <br>
+        <a href="./index.html"><img src="images/herf.png"></a>
+        <br>
+        <a href="./about.html"><img src="images/her3.png"></a>
+        <br>
+        <a href="./2.html"><img src="images/her1.png"></a>
+        <br>
+        <a href="./know.html"><img src="images/her2.png"></a>
+    </div>
+    <div class="a13 scroll">
+        <img src="images/e13.png" alt="" />
+    </div>
+    <div class="a12 scroll">
+        <img src="images/e12.png" alt="" />
+    </div>
+    <div class="a11 scroll">
+        <img src="images/e11.png" alt="" />
+    </div>
+    <div class="a10 scroll">
+        <img src="images/e10.png" alt="" />
+    </div>
+    <div class="a9 scroll">
+        <img src="images/e9.png" alt="" />
+    </div>
+    <div class="a8 scroll">
+        <img src="images/e8.png" alt="" />
+    </div>
+    <div class="a7 scroll">
+        <img src="images/e7.png" alt="" />
+    </div>
+    <div class="a6 scroll">
+        <img src="images/e6.png" alt="" />
+    </div>
+    <div class="a5 scroll">
+        <img src="images/e5.png" alt="" />
+    </div>
+    <div class="a4 scroll">
+        <img src="images/e4.png" alt="" />
+    </div>
+    <div class="a3 scroll">
+        <img src="images/e3.png" alt="" />
+    </div>
+    <div class="a2 scroll">
+        <img src="images/e2.png" alt="" />
+    </div>
+    <div class="a1 scroll">
+        <img src="images/e1.png" alt="" />
+    </div>
+    <div class="a6 scroll">
+        <img src="images/d3.png" alt="" />
+    </div>
+    <div class="a4 scroll">
+        <img src="images/d2.png" alt="" />
+    </div>
+    <div class="a12 scroll">
+        <img src="images/c6.png" alt="" />
+    </div>
+    <div class="a11 scroll">
+        <img src="images/c5.png" alt="" />
+    </div>
+    <div class="a10 scroll">
+        <img src="images/c4.png" alt="" />
+    </div>
+    <div class="a9 scroll">
+        <img src="images/c3.png" alt="" />
+    </div>
+    <div class="a8 scroll">
+        <img src="images/c2.png" alt="" />
+    </div>
+    <div class="a7 scroll">
+        <img src="images/c1.png" alt="" />
+    </div>
+    <div class="a5 scroll">
+        <img src="images/b1.png" alt="" />
+    </div>
+    <div class="a13 scroll">
+        <img src="images/a13.png" alt="" />
+    </div>
+    <div class="a12 scroll">
+        <img src="images/a12.png" alt="" />
+    </div>
+    <div class="a11 scroll">
+        <img src="images/a11.png" alt="" />
+    </div>
+    <div class="a10 scroll">
+        <img src="images/a10.png" alt="" />
+    </div>
+    <div class="a9 scroll">
+        <img src="images/a9.png" alt="" />
+    </div>
+    <div class="a8 scroll">
+        <img src="images/a8.png" alt="" />
+    </div>
+    <div class="a7 scroll">
+        <img src="images/a7.png" alt="" />
+    </div>
+    <div class="a6 scroll">
+        <img src="images/a6.png" alt="" />
+    </div>
+    <div class="a5 scroll">
+        <img src="images/a5.png" alt="" />
+    </div>
+    <div class="a4 scroll">
+        <img src="images/a4.png" alt="" />
+    </div>
+    <div class="a3 scroll">
+        <img src="images/a3.png" alt="" />
+    </div>
+    <div class="a2 scroll">
+        <img src="images/a2.png" alt="" />
+    </div>
+    <div class="a1 scroll">
+        <img src="images/a1.png" alt="" />
+    </div>
+    <script type="text/javascript" src="../libs/jquery.min.js"></script>
+    <script type="text/javascript" src="../src/jquery.jInvertScroll.js"></script>
+    <script type="text/javascript">
+        (function($) {
+            var elem = $.jInvertScroll(['.scroll'], // an array containing the selector(s) for the elements you want to animate
+                {
+                    height: 6000, // optional: define the height the user can scroll, otherwise the overall length will be taken as scrollable height
+                    onScroll: function(percent) { //optional: callback function that will be called when the user scrolls down, useful for animating other things on the page
+                        console.log(percent);
+                    }
+                });
+
+            $(window).resize(function() {
+                if ($(window).width() <= 768) {
+                    elem.destroy();
+                } else {
+                    elem.reinitialize();
+                }
+            });
+        }(jQuery));
+    </script>
+</body>
+</html>
